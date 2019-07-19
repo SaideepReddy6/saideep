@@ -7,9 +7,9 @@ import string, random, requests
 app = Flask(__name__, instance_relative_config=True)
 
 app.config.from_pyfile('config.py')
-account = app.config['ACCOUNT']   # Azure account name
-key = app.config['STORAGE_KEY']      # Azure Storage account access key  
-container = app.config['CONTAINER'] # Container name
+account = app.config['sqlva4gk6bb2el7ldy']   # Azure account name
+key = app.config['FWBELIECAHFMefpP2asx7SUV9ti72G9/xbBebJonNLY4C2JC5J4Ddf7vXnH+79AwmFfUfpwG3gqDz10zOffDhg==']      # Azure Storage account access key  
+container = app.config['saideep'] # Container name
 
 blob_service = BlockBlobService(account_name=account, account_key=key)
 
