@@ -1,26 +1,16 @@
 from flask import  Flask,flash, request, redirect, render_template
 app=Flask(__name__)
+import os
+from flask import  Flask,flash, request, redirect, render_template
+from werkzeug.utils import secure_filename
+import pandas as pd
 def id_generator(size=32, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 @app.route('/')
 def upload_form():
-	import os
-	from azure.storage.blob import BlockBlobService, PublicAccess
-	from azure.storage.blob import BlockBlobService
-	from flask import  Flask,flash, request, redirect, render_template
-	from werkzeug.utils import secure_filename
-	import pandas as pd
-	import string, random, requests
 	return render_template('upload.html')
 @app.route('/handleUpload', methods=['POST'])
 def upload_file():
-	import os
-	from azure.storage.blob import BlockBlobService, PublicAccess
-	from azure.storage.blob import BlockBlobService
-	from flask import  Flask,flash, request, redirect, render_template
-	from werkzeug.utils import secure_filename
-	import pandas as pd
-	import string, random, requests
         file = request.files['file']
         filename = secure_filename(file.filename)
         #fileextension = filename.rsplit('.',1)[1]
