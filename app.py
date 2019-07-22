@@ -1,3 +1,4 @@
+from flask import  Flask,flash, request, redirect, render_template
 app=Flask(__name__)
 def id_generator(size=32, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
